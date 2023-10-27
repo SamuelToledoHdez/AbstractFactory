@@ -1,3 +1,3 @@
 public class MagicCreature extends Creatures {
-    //criatura magica
+    //criatura magica 2
 }
