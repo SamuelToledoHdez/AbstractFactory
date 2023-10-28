@@ -2,10 +2,10 @@ public class MagicFactory extends AbstractFactory{
     public Weapon weaponBuild(){
         return new MagicWeapon();
     }
-    public Token tokenBuild(){
-        return new MagicToken();
+    public Token tokenBuild(double cantidad){
+        return new MagicToken(cantidad);
     }
-    public Creatures creatureBuild(){
-        return new MagicCreature();
+    public Creatures creatureBuild(double vidas){
+        return new MagicCreature(vidas);
     }
 }
