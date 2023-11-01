@@ -23,7 +23,7 @@ class Application {
     }
 
     public void createGUI() {
-        window = factory.createWindow("Demo");
+        window = factory.createWindow("RPG");
         button1 = factory.createButton("Button 1");
         button2 = factory.createButton("Button 2");
 
