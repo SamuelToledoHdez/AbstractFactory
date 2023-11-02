@@ -1,11 +1,12 @@
 package GUI;
 
-import javax.swing.*;
+
 import java.awt.*;
 public class XboxWindow extends Window {
     public XboxWindow(String title) {
         super(title);
         setColor();
+        setLogo("IMG/XBOX.png");
     }
 
     @Override

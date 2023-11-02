@@ -1,6 +1,6 @@
 package GUI;
 
-import javax.swing.*;
+
 import java.awt.*;
 public class SegaButton extends Button {
     public SegaButton(String label) {

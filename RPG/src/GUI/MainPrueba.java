@@ -23,12 +23,12 @@ class Application {
     }
 
     public void createGUI() {
-        window = factory.createWindow("Demo");
+        window = factory.createWindow("RPG");
         button1 = factory.createButton("Button 1");
         button2 = factory.createButton("Button 2");
 
         //Tamaño Botones
-        Dimension buttonSize = new Dimension(100, 30);
+        Dimension buttonSize = new Dimension(135, 40);
         button1.setPreferredSize(buttonSize);
         button2.setPreferredSize(buttonSize);
 
@@ -40,9 +40,6 @@ class Application {
 
         // Añadir el panel de botones a la ventana
         window.addComponent(buttonPanel);
-
-        //Tamaño Ventana
-        window.frame.setSize(600, 400);
 
         window.display();
     }

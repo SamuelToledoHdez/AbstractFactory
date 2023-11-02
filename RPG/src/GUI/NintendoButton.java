@@ -1,6 +1,5 @@
 package GUI;
 
-import javax.swing.*;
 import java.awt.*;
 public class NintendoButton extends Button {
     public NintendoButton(String label) {

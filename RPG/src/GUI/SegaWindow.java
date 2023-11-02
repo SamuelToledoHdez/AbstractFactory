@@ -1,11 +1,12 @@
 package GUI;
 
-import javax.swing.*;
+
 import java.awt.*;
 public class SegaWindow extends Window {
     public SegaWindow(String title) {
         super(title);
         setColor();
+        setLogo("IMG/SEGA.png");
     }
 
     @Override
