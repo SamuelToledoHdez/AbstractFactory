@@ -1,3 +1,4 @@
+package Game;
 public class MagicToken extends Token{
 
     MagicToken(double cant){

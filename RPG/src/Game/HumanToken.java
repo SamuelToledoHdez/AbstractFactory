@@ -1,3 +1,4 @@
+package Game;
 public class HumanToken extends Token{
 
     HumanToken(double cant){

@@ -1,3 +1,4 @@
+package Game;
 public abstract class Weapon {
     public double getDano() {
         return dano;

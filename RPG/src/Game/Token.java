@@ -1,3 +1,4 @@
+package Game;
 public abstract class Token {
     public double getCantidad() {
         return cantidad;

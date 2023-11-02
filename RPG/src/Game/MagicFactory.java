@@ -1,4 +1,6 @@
-public class MagicFactory extends AbstractFactory{
+package Game;
+
+public class MagicFactory extends AbstractFactory {
     public Weapon weaponBuild(double dano, double robo){
         return new MagicWeapon(dano,robo);
     }

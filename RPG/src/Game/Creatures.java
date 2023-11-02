@@ -1,3 +1,4 @@
+package Game;
 public abstract class Creatures {
     public double getVida() {
         return vida;
