@@ -11,6 +11,6 @@ public class XboxWindow extends Window {
 
     @Override
     public void setColor() {
-        frame.getContentPane().setBackground(Color.decode("#1b2631"));
+        getFrame().getContentPane().setBackground(Color.decode("#1b2631"));
     }
 }

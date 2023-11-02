@@ -11,6 +11,6 @@ public class NintendoWindow extends Window {
 
     @Override
     public void setColor() {
-        frame.getContentPane().setBackground(Color.decode("#a6acaf"));
+        getFrame().getContentPane().setBackground(Color.decode("#a6acaf"));
     }
 }

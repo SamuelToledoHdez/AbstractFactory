@@ -1,8 +1,11 @@
 package Game;
 
+import java.util.Random;
+
 public class HumanCreature extends Creatures {
 
-    HumanCreature(double vidas){
-        vida = vidas *0.75;
+    HumanCreature(){
+        Random random = new Random();
+        vida = random.nextInt(100) + 1;
     }
 }

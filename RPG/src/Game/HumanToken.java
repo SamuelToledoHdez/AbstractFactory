@@ -1,9 +1,12 @@
 package Game;
 
+import java.util.Random;
+
 public class HumanToken extends Token{
 
-    HumanToken(double cant){
-        cantidad= cant *1.25;
+    HumanToken(){
+        Random random = new Random();
+        cantidad= random.nextInt(100) + 1;
 
     }
 }

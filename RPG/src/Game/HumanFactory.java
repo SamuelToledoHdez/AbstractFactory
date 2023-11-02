@@ -1,13 +1,13 @@
 package Game;
 
 public class HumanFactory extends AbstractFactory{
-    public Weapon weaponBuild(double a, double b){
-        return new HumanWeapon(a,b);
+    public Weapon weaponBuild(){
+        return new HumanWeapon();
     }
-    public Token tokenBuild(double cantidad){
-        return new HumanToken(cantidad);
+    public Token tokenBuild(){
+        return new HumanToken();
     }
-    public Creatures creatureBuild(double vidas){
-        return new HumanCreature(vidas);
+    public Creatures creatureBuild(){
+        return new HumanCreature();
     }
 }

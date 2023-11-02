@@ -11,6 +11,6 @@ public class SegaWindow extends Window {
 
     @Override
     public void setColor() {
-        frame.getContentPane().setBackground(Color.decode("#003366"));
+        getFrame().getContentPane().setBackground(Color.decode("#003366"));
     }
 }

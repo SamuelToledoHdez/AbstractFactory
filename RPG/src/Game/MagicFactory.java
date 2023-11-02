@@ -1,13 +1,13 @@
 package Game;
 
 public class MagicFactory extends AbstractFactory{
-    public Weapon weaponBuild(double dano, double robo){
-        return new MagicWeapon(dano,robo);
+    public Weapon weaponBuild(){
+        return new MagicWeapon();
     }
-    public Token tokenBuild(double cantidad){
-        return new MagicToken(cantidad);
+    public Token tokenBuild(){
+        return new MagicToken();
     }
-    public Creatures creatureBuild(double vidas){
-        return new MagicCreature(vidas);
+    public Creatures creatureBuild(){
+        return new MagicCreature();
     }
 }
