@@ -1,6 +1,6 @@
 public class HumanFactory extends AbstractFactory{
-    public Weapon weaponBuild(){
-        return new HumanWeapon();
+    public Weapon weaponBuild(double a, double b){
+        return new HumanWeapon(a,b);
     }
     public Token tokenBuild(double cantidad){
         return new HumanToken(cantidad);
