@@ -1,3 +1,5 @@
+package Game;
+
 public class HumanCreature extends Creatures {
 
     HumanCreature(double vidas){

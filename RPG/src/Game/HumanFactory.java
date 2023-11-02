@@ -1,3 +1,5 @@
+package Game;
+
 public class HumanFactory extends AbstractFactory{
     public Weapon weaponBuild(double a, double b){
         return new HumanWeapon(a,b);
