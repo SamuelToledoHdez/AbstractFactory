@@ -1,8 +1,12 @@
 package Game;
+
+import java.util.Random;
+
 public class MagicToken extends Token{
 
-    MagicToken(double cant){
-        cantidad = cant *0.5;
+    MagicToken(){
+        Random random = new Random();
+        cantidad = random.nextInt(100) + 1;
 
     }
 }

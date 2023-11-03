@@ -36,7 +36,7 @@ class Application {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.add(button1);
         buttonPanel.add(button2);
-        buttonPanel.setBackground(window.frame.getContentPane().getBackground());  // Configurar el color de fondo del panel
+        buttonPanel.setBackground(window.getFrame().getContentPane().getBackground());  // Configurar el color de fondo del panel
 
         // Añadir el panel de botones a la ventana
         window.addComponent(buttonPanel);
