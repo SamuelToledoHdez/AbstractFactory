@@ -9,6 +9,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.*;
+import java.awt.*;
+
 class Application {
     private Window window;
     private Button button1;
@@ -22,11 +25,15 @@ class Application {
     private Weapon weapon2;
     private Token token1;
     private Token token2;
+    private JLabel creature1Label;
+    private JLabel creature2Label;
 
     public Application(GUIFactory factory, AbstractFactory criatura1Factory, AbstractFactory criatura2Factory) {
         this.factory = factory;
         this.criatura1Factory = criatura1Factory;
         this.criatura2Factory = criatura2Factory;
+        creature1Label = new JLabel();
+        creature2Label = new JLabel();
     }
 
     public void createGUI() {
@@ -56,6 +63,13 @@ class Application {
         button1.addActionListener(e -> updateCreatureStats(criatura2, weapon2, token2, criatura1, weapon1, token1));
         button2.addActionListener(e -> updateCreatureStats(criatura1, weapon1, token1, criatura2, weapon2, token2));
 
+        creature1Label.setIcon(new ImageIcon(getClass().getResource(criatura1.getImagePath())));
+        creature2Label.setIcon(new ImageIcon(getClass().getResource(criatura2.getImagePath())));
+        creature1Label.setHorizontalAlignment(JLabel.CENTER);
+        creature2Label.setHorizontalAlignment(JLabel.CENTER);
+        window.getCreature1Panel().add(creature1Label);
+        window.getCreature2Panel().add(creature2Label);
+
         window.display();
     }
 
@@ -76,5 +90,19 @@ class Application {
 
         window.showCreatureStats("Vida: " + criatura1.getVida(), "Daño: " + weapon1.getDano(), "Robo: " + weapon1.getRobo(), "Tokens: " + token1.getCantidad(),
                 "Vida: " + criatura2.getVida(), "Daño: " + weapon2.getDano(), "Robo: " + weapon2.getRobo(), "Tokens: " + token2.getCantidad());
+
+        // Asegúrate de que los GIFs aún estén en su lugar
+        if (creature1Label.getParent() == null) {
+            window.getCreature1Panel().add(creature1Label);
+        }
+        if (creature2Label.getParent() == null) {
+            window.getCreature2Panel().add(creature2Label);
+        }
+
+        // Actualiza la UI
+        window.getFrame().revalidate();
+        window.getFrame().repaint();
     }
 }
+
+

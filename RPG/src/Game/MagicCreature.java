@@ -7,7 +7,7 @@ public class MagicCreature extends Creatures {
     MagicCreature(){
         Random random = new Random();
         vida = random.nextInt(100) + 1;
-
+        imagePath = "GIF/MAG.gif";
     }
 }
 

@@ -116,6 +116,13 @@ public abstract class Window {
         frame.revalidate();
         frame.repaint();
     }
+    public JPanel getCreature1Panel() {
+        return creature1Panel;
+    }
+
+    public JPanel getCreature2Panel() {
+        return creature2Panel;
+    }
 
     public abstract Color getLabelColor();
 
