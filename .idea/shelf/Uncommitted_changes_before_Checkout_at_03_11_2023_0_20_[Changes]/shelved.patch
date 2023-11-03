@@ -1,0 +1,532 @@
+Index: RPG/src/GUI/NintendoWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\n\r\nimport java.awt.*;\r\npublic class NintendoWindow extends Window {\r\n    public NintendoWindow(String title) {\r\n        super(title);\r\n        setColor();\r\n        setLogo(\"IMG/NINT.png\");\r\n    }\r\n\r\n    @Override\r\n    public void setColor() {\r\n        getFrame().getContentPane().setBackground(Color.decode(\"#a6acaf\"));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RPG/src/GUI/NintendoWindow.java b/RPG/src/GUI/NintendoWindow.java
+--- a/RPG/src/GUI/NintendoWindow.java	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
++++ b/RPG/src/GUI/NintendoWindow.java	(date 1698969721435)
+@@ -2,6 +2,8 @@
+ 
+ 
+ import java.awt.*;
++import java.awt.Color;
++
+ public class NintendoWindow extends Window {
+     public NintendoWindow(String title) {
+         super(title);
+@@ -13,4 +15,14 @@
+     public void setColor() {
+         getFrame().getContentPane().setBackground(Color.decode("#a6acaf"));
+     }
++
++    @Override
++    public Color getLabelColor() {
++        return getFrame().getContentPane().getBackground();
++    }
++
++    @Override
++    public Color getTextColor() {
++        return Color.decode("#d32f2f"); // Color de NintendoButton
++    }
+ }
+Index: RPG/src/GUI/MainPrueba.java
+===================================================================
+diff --git a/RPG/src/GUI/MainPrueba.java b/RPG/src/GUI/MainPrueba.java
+deleted file mode 100644
+--- a/RPG/src/GUI/MainPrueba.java	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
++++ /dev/null	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
+@@ -1,46 +0,0 @@
+-package GUI;
+-
+-import javax.swing.*;
+-import java.awt.*;
+-public class MainPrueba {
+-    public static void main(String[] args) {
+-        SwingUtilities.invokeLater(() -> {
+-            GUIFactory factory = new SegaGUIFactory(); // Prueba con Sega
+-            Application app = new Application(factory);
+-            app.createGUI();
+-        });
+-    }
+-}
+-
+-class Application {
+-    private Window window;
+-    private Button button1;
+-    private Button button2;
+-    private GUIFactory factory;
+-
+-    public Application(GUIFactory factory) {
+-        this.factory = factory;
+-    }
+-
+-    public void createGUI() {
+-        window = factory.createWindow("RPG");
+-        button1 = factory.createButton("Button 1");
+-        button2 = factory.createButton("Button 2");
+-
+-        //Tamaño Botones
+-        Dimension buttonSize = new Dimension(135, 40);
+-        button1.setPreferredSize(buttonSize);
+-        button2.setPreferredSize(buttonSize);
+-
+-        //Ventana con botones
+-        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+-        buttonPanel.add(button1);
+-        buttonPanel.add(button2);
+-        buttonPanel.setBackground(window.getFrame().getContentPane().getBackground());  // Configurar el color de fondo del panel
+-
+-        // Añadir el panel de botones a la ventana
+-        window.addComponent(buttonPanel);
+-
+-        window.display();
+-    }
+-}
+\ No newline at end of file
+Index: RPG/src/Game/Client.java
+===================================================================
+diff --git a/RPG/src/Game/Client.java b/RPG/src/Game/Client.java
+deleted file mode 100644
+--- a/RPG/src/Game/Client.java	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
++++ /dev/null	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
+@@ -1,6 +0,0 @@
+-package Game;
+-
+-public class Client {
+-
+-
+-}
+Index: RPG/src/GUI/XboxWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\n\r\nimport java.awt.*;\r\npublic class XboxWindow extends Window {\r\n    public XboxWindow(String title) {\r\n        super(title);\r\n        setColor();\r\n        setLogo(\"IMG/XBOX.png\");\r\n    }\r\n\r\n    @Override\r\n    public void setColor() {\r\n        getFrame().getContentPane().setBackground(Color.decode(\"#1b2631\"));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RPG/src/GUI/XboxWindow.java b/RPG/src/GUI/XboxWindow.java
+--- a/RPG/src/GUI/XboxWindow.java	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
++++ b/RPG/src/GUI/XboxWindow.java	(date 1698969687426)
+@@ -1,7 +1,8 @@
+ package GUI;
+ 
+ 
+-import java.awt.*;
++import java.awt.Color;
++
+ public class XboxWindow extends Window {
+     public XboxWindow(String title) {
+         super(title);
+@@ -13,4 +14,15 @@
+     public void setColor() {
+         getFrame().getContentPane().setBackground(Color.decode("#1b2631"));
+     }
++
++    @Override
++    public Color getLabelColor() {
++        return getFrame().getContentPane().getBackground();
++    }
++
++    @Override
++    public Color getTextColor() {
++        return Color.decode("#00FF33"); // Color de XboxButton
++    }
+ }
++
+Index: RPG/src/Game/Applicattion.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Game;\r\n\r\nimport GUI.Button;\r\nimport GUI.GUIFactory;\r\nimport GUI.Window;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\nclass Applicattion {\r\n    private Window window;\r\n    private Button button1;\r\n    private Button button2;\r\n    private GUIFactory factory;\r\n    private AbstractFactory factoria;\r\n    private Creatures criatura1;\r\n    private Creatures criatura2;\r\n    private Weapon weapon1;\r\n    private Weapon weapon2;\r\n    private Token token1;\r\n    private Token token2;\r\n\r\n\r\n    public Applicattion(GUIFactory factory, AbstractFactory factorias) {\r\n        this.factory = factory;\r\n        this.factoria = factorias;\r\n    }\r\n\r\n    public void createGUI() {\r\n        window = factory.createWindow(\"RPG\");\r\n        button1 = factory.createButton(\"LUCHAR 1\");\r\n        button2 = factory.createButton(\"LUCHAR 2\");\r\n        criatura1 = factoria.creatureBuild();\r\n        criatura2 = factoria.creatureBuild();\r\n        weapon1 = factoria.weaponBuild();\r\n        weapon2 = factoria.weaponBuild();\r\n        token1 = factoria.tokenBuild();\r\n        token2 = factoria.tokenBuild();\r\n\r\n        //Tamaño Botones\r\n        Dimension buttonSize = new Dimension(135, 40);\r\n        button1.setPreferredSize(buttonSize);\r\n        button2.setPreferredSize(buttonSize);\r\n\r\n        //Ventana con botones\r\n        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));\r\n        buttonPanel.add(button1);\r\n        buttonPanel.add(button2);\r\n        buttonPanel.setBackground(window.getFrame().getContentPane().getBackground());  // Configurar el color de fondo del panel\r\n\r\n        // Añadir el panel de botones a la ventana\r\n        window.addComponent(buttonPanel);\r\n        window.showCreatureStats(\"Vida: \" + criatura1.getVida(), \"Daño: \" + weapon1.getDano(), \"Robo: \" + weapon1.getRobo(), \"Tokens: \" + token1.getCantidad(),\r\n                \"Vida: \" + criatura2.getVida(), \"Daño: \" + weapon2.getDano(), \"Robo: \" + weapon2.getRobo(), \"Tokens: \" + token2.getCantidad());\r\n\r\n        button1.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                // Actualiza las estadísticas de criatura 1 en la ventana\r\n                updateCreatureStats(criatura2,weapon2,token2,criatura1,weapon1,token1);\r\n\r\n            }\r\n        });\r\n\r\n        // Agregar ActionListener al botón 2\r\n        button2.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                // Actualiza las estadísticas de criatura 2 en la ventana\r\n                updateCreatureStats(criatura1,weapon1,token1,criatura2,weapon2,token2);\r\n            }\r\n        });\r\n\r\n        window.display();\r\n    }\r\n    private void updateCreatureStats(Creatures criatura, Weapon arma, Token dinero, Creatures criaturas2, Weapon armas2, Token dineros2) {\r\n        // Supongamos que puedes obtener las estadísticas de la criatura a través de sus métodos\r\n\r\n        double nuevaVida = criatura.getVida() - armas2.getDano();\r\n        double nuevoDinero = dinero.getCantidad() - armas2.getRobo();\r\n\r\n        // Verifica si la nueva vida sería negativa y si es así, establece la vida en 0\r\n        if (nuevaVida < 0) {\r\n            nuevaVida = 0;\r\n        }\r\n\r\n        // Verifica si el nuevo dinero sería negativo y si es así, establece el dinero en 0\r\n        if (nuevoDinero < 0) {\r\n            nuevoDinero = 0;\r\n        }\r\n\r\n        criatura.setVida(nuevaVida);\r\n        dinero.setCantidad(nuevoDinero);\r\n\r\n        // Actualiza las etiquetas en la ventana con las estadísticas\r\n        window.showCreatureStats(\"Vida: \" + criatura1.getVida(), \"Daño: \" + weapon1.getDano(), \"Robo: \" + weapon1.getRobo(), \"Tokens: \" + token1.getCantidad(),\r\n                \"Vida: \" + criatura2.getVida(), \"Daño: \" + weapon2.getDano(), \"Robo: \" + weapon2.getRobo(), \"Tokens: \" + token2.getCantidad());\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RPG/src/Game/Applicattion.java b/RPG/src/Game/Applicattion.java
+--- a/RPG/src/Game/Applicattion.java	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
++++ b/RPG/src/Game/Applicattion.java	(date 1698970219275)
+@@ -9,12 +9,13 @@
+ import java.awt.event.ActionEvent;
+ import java.awt.event.ActionListener;
+ 
+-class Applicattion {
++class Application {
+     private Window window;
+     private Button button1;
+     private Button button2;
+     private GUIFactory factory;
+-    private AbstractFactory factoria;
++    private AbstractFactory criatura1Factory;
++    private AbstractFactory criatura2Factory;
+     private Creatures criatura1;
+     private Creatures criatura2;
+     private Weapon weapon1;
+@@ -22,71 +23,50 @@
+     private Token token1;
+     private Token token2;
+ 
+-
+-    public Applicattion(GUIFactory factory, AbstractFactory factorias) {
++    public Application(GUIFactory factory, AbstractFactory criatura1Factory, AbstractFactory criatura2Factory) {
+         this.factory = factory;
+-        this.factoria = factorias;
++        this.criatura1Factory = criatura1Factory;
++        this.criatura2Factory = criatura2Factory;
+     }
+ 
+     public void createGUI() {
+         window = factory.createWindow("RPG");
+         button1 = factory.createButton("LUCHAR 1");
+         button2 = factory.createButton("LUCHAR 2");
+-        criatura1 = factoria.creatureBuild();
+-        criatura2 = factoria.creatureBuild();
+-        weapon1 = factoria.weaponBuild();
+-        weapon2 = factoria.weaponBuild();
+-        token1 = factoria.tokenBuild();
+-        token2 = factoria.tokenBuild();
++        criatura1 = criatura1Factory.creatureBuild();
++        criatura2 = criatura2Factory.creatureBuild();
++        weapon1 = criatura1Factory.weaponBuild();
++        weapon2 = criatura2Factory.weaponBuild();
++        token1 = criatura1Factory.tokenBuild();
++        token2 = criatura2Factory.tokenBuild();
+ 
+-        //Tamaño Botones
+         Dimension buttonSize = new Dimension(135, 40);
+         button1.setPreferredSize(buttonSize);
+         button2.setPreferredSize(buttonSize);
+ 
+-        //Ventana con botones
+         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+         buttonPanel.add(button1);
+         buttonPanel.add(button2);
+-        buttonPanel.setBackground(window.getFrame().getContentPane().getBackground());  // Configurar el color de fondo del panel
++        buttonPanel.setBackground(window.getFrame().getContentPane().getBackground());
+ 
+-        // Añadir el panel de botones a la ventana
+         window.addComponent(buttonPanel);
+         window.showCreatureStats("Vida: " + criatura1.getVida(), "Daño: " + weapon1.getDano(), "Robo: " + weapon1.getRobo(), "Tokens: " + token1.getCantidad(),
+                 "Vida: " + criatura2.getVida(), "Daño: " + weapon2.getDano(), "Robo: " + weapon2.getRobo(), "Tokens: " + token2.getCantidad());
+ 
+-        button1.addActionListener(new ActionListener() {
+-            @Override
+-            public void actionPerformed(ActionEvent e) {
+-                // Actualiza las estadísticas de criatura 1 en la ventana
+-                updateCreatureStats(criatura2,weapon2,token2,criatura1,weapon1,token1);
+-
+-            }
+-        });
+-
+-        // Agregar ActionListener al botón 2
+-        button2.addActionListener(new ActionListener() {
+-            @Override
+-            public void actionPerformed(ActionEvent e) {
+-                // Actualiza las estadísticas de criatura 2 en la ventana
+-                updateCreatureStats(criatura1,weapon1,token1,criatura2,weapon2,token2);
+-            }
+-        });
++        button1.addActionListener(e -> updateCreatureStats(criatura2, weapon2, token2, criatura1, weapon1, token1));
++        button2.addActionListener(e -> updateCreatureStats(criatura1, weapon1, token1, criatura2, weapon2, token2));
+ 
+         window.display();
+     }
++
+     private void updateCreatureStats(Creatures criatura, Weapon arma, Token dinero, Creatures criaturas2, Weapon armas2, Token dineros2) {
+-        // Supongamos que puedes obtener las estadísticas de la criatura a través de sus métodos
+-
+         double nuevaVida = criatura.getVida() - armas2.getDano();
+         double nuevoDinero = dinero.getCantidad() - armas2.getRobo();
+ 
+-        // Verifica si la nueva vida sería negativa y si es así, establece la vida en 0
+         if (nuevaVida < 0) {
+             nuevaVida = 0;
+         }
+ 
+-        // Verifica si el nuevo dinero sería negativo y si es así, establece el dinero en 0
+         if (nuevoDinero < 0) {
+             nuevoDinero = 0;
+         }
+@@ -94,10 +74,7 @@
+         criatura.setVida(nuevaVida);
+         dinero.setCantidad(nuevoDinero);
+ 
+-        // Actualiza las etiquetas en la ventana con las estadísticas
+         window.showCreatureStats("Vida: " + criatura1.getVida(), "Daño: " + weapon1.getDano(), "Robo: " + weapon1.getRobo(), "Tokens: " + token1.getCantidad(),
+                 "Vida: " + criatura2.getVida(), "Daño: " + weapon2.getDano(), "Robo: " + weapon2.getRobo(), "Tokens: " + token2.getCantidad());
+     }
+-
+-
+-}
+\ No newline at end of file
++}
+Index: RPG/src/GUI/Window.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\nimport javax.swing.*;\r\nimport javax.swing.border.EmptyBorder;\r\nimport java.awt.*;\r\n\r\npublic abstract class Window {\r\n    private JPanel contentPanel;\r\n    private JPanel creature1Panel;\r\n    private JPanel creature2Panel;\r\n    private JFrame frame;\r\n    private JPanel logoPanel;\r\n\r\n    public Window(String title) {\r\n        frame = new JFrame(title);\r\n        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        frame.setLayout(new BorderLayout());\r\n\r\n        logoPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));\r\n        frame.add(logoPanel, BorderLayout.NORTH);\r\n\r\n        contentPanel = new JPanel(new FlowLayout()); // Utiliza FlowLayout en lugar de GridLayout\r\n        creature1Panel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 0)); // Margen izquierdo de 10 píxeles\r\n        creature2Panel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 0)); // Margen derecho de 10 píxeles\r\n        int marginLeftRight = 100;\r\n        creature1Panel.setBorder(new EmptyBorder(10, 100, 10, 100));\r\n        creature2Panel.setBorder(new EmptyBorder(10, 100, 10, 100));\r\n\r\n\r\n        // Configura el color de fondo de los paneles\r\n        frame.add(creature1Panel, BorderLayout.WEST); // Coloca creature1Panel a la izquierda\r\n        frame.add(creature2Panel, BorderLayout.EAST);\r\n\r\n    }\r\n\r\n    public abstract void setColor();\r\n\r\n    public void addComponent(Component component) {\r\n        frame.add(component, BorderLayout.SOUTH);\r\n    }\r\n\r\n    public void display() {\r\n        frame.setSize(1000, 750);\r\n        frame.setResizable(false);\r\n        frame.setLocationRelativeTo(null);\r\n        frame.setVisible(true);\r\n        frame.revalidate();\r\n        frame.repaint();\r\n\r\n    }\r\n\r\n    public void setLogo(String logoPath) {\r\n        ImageIcon logoIcon = new ImageIcon(getClass().getResource(logoPath));\r\n        JLabel logoLabel = new JLabel(logoIcon);\r\n        logoPanel.add(logoLabel);\r\n        logoPanel.setBackground(frame.getContentPane().getBackground());\r\n    }\r\n\r\n    public void showCreatureStats(String vida1, String dano1, String robo1, String tokens1,\r\n                                  String vida2, String dano2, String robo2, String tokens2) {\r\n\r\n        creature1Panel.removeAll(); // Elimina todas las etiquetas anteriores\r\n        creature2Panel.removeAll();\r\n        creature1Panel.setLayout(new GridLayout(0, 1)); // Cambia a GridLayout con una sola columna\r\n        creature2Panel.setLayout(new GridLayout(0, 1)); // Cambia a GridLayout con una sola columna\r\n\r\n        Font labelFont = new Font(\"Arial\", Font.PLAIN, 30); // Establece un tamaño de fuente más grande\r\n\r\n        JLabel vidaLabel1 = new JLabel(vida1);\r\n        JLabel danoLabel1 = new JLabel(dano1);\r\n        JLabel roboLabel1 = new JLabel(robo1);\r\n        JLabel tokensLabel1 = new JLabel(tokens1);\r\n\r\n        JLabel vidaLabel2 = new JLabel(vida2);\r\n        JLabel danoLabel2 = new JLabel(dano2);\r\n        JLabel roboLabel2 = new JLabel(robo2);\r\n        JLabel tokensLabel2 = new JLabel(tokens2);\r\n\r\n        vidaLabel1.setForeground(Color.RED);\r\n        danoLabel1.setForeground(Color.RED);\r\n        roboLabel1.setForeground(Color.RED);\r\n        tokensLabel1.setForeground(Color.RED);\r\n\r\n        vidaLabel2.setForeground(Color.RED);\r\n        danoLabel2.setForeground(Color.RED);\r\n        roboLabel2.setForeground(Color.RED);\r\n        tokensLabel2.setForeground(Color.RED);\r\n\r\n        // Aplica el tamaño de fuente a los JLabel\r\n        vidaLabel1.setFont(labelFont);\r\n        danoLabel1.setFont(labelFont);\r\n        roboLabel1.setFont(labelFont);\r\n        tokensLabel1.setFont(labelFont);\r\n\r\n        vidaLabel2.setFont(labelFont);\r\n        danoLabel2.setFont(labelFont);\r\n        roboLabel2.setFont(labelFont);\r\n        tokensLabel2.setFont(labelFont);\r\n\r\n        // Establece un color de texto para los JLabel\r\n\r\n\r\n        creature1Panel.add(vidaLabel1);\r\n        creature1Panel.add(danoLabel1);\r\n        creature1Panel.add(roboLabel1);\r\n        creature1Panel.add(tokensLabel1);\r\n\r\n        creature2Panel.add(vidaLabel2);\r\n        creature2Panel.add(danoLabel2);\r\n        creature2Panel.add(roboLabel2);\r\n        creature2Panel.add(tokensLabel2);\r\n\r\n        frame.revalidate();\r\n        frame.repaint();\r\n    }\r\n\r\n\r\n    public JFrame getFrame() {\r\n        return frame;\r\n    }\r\n\r\n    public void setFrame(JFrame frame) {\r\n        this.frame = frame;\r\n    }\r\n\r\n    public JPanel getLogoPanel() {\r\n        return logoPanel;\r\n    }\r\n\r\n    public void setLogoPanel(JPanel logoPanel) {\r\n        this.logoPanel = logoPanel;\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RPG/src/GUI/Window.java b/RPG/src/GUI/Window.java
+--- a/RPG/src/GUI/Window.java	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
++++ b/RPG/src/GUI/Window.java	(date 1698969510139)
+@@ -4,6 +4,10 @@
+ import javax.swing.border.EmptyBorder;
+ import java.awt.*;
+ 
++import javax.swing.*;
++import javax.swing.border.EmptyBorder;
++import java.awt.*;
++
+ public abstract class Window {
+     private JPanel contentPanel;
+     private JPanel creature1Panel;
+@@ -29,8 +33,7 @@
+ 
+         // Configura el color de fondo de los paneles
+         frame.add(creature1Panel, BorderLayout.WEST); // Coloca creature1Panel a la izquierda
+-        frame.add(creature2Panel, BorderLayout.EAST);
+-
++        frame.add(creature2Panel, BorderLayout.EAST); // Coloca creature2Panel a la derecha
+     }
+ 
+     public abstract void setColor();
+@@ -46,7 +49,6 @@
+         frame.setVisible(true);
+         frame.revalidate();
+         frame.repaint();
+-
+     }
+ 
+     public void setLogo(String logoPath) {
+@@ -58,7 +60,6 @@
+ 
+     public void showCreatureStats(String vida1, String dano1, String robo1, String tokens1,
+                                   String vida2, String dano2, String robo2, String tokens2) {
+-
+         creature1Panel.removeAll(); // Elimina todas las etiquetas anteriores
+         creature2Panel.removeAll();
+         creature1Panel.setLayout(new GridLayout(0, 1)); // Cambia a GridLayout con una sola columna
+@@ -76,17 +77,6 @@
+         JLabel roboLabel2 = new JLabel(robo2);
+         JLabel tokensLabel2 = new JLabel(tokens2);
+ 
+-        vidaLabel1.setForeground(Color.RED);
+-        danoLabel1.setForeground(Color.RED);
+-        roboLabel1.setForeground(Color.RED);
+-        tokensLabel1.setForeground(Color.RED);
+-
+-        vidaLabel2.setForeground(Color.RED);
+-        danoLabel2.setForeground(Color.RED);
+-        roboLabel2.setForeground(Color.RED);
+-        tokensLabel2.setForeground(Color.RED);
+-
+-        // Aplica el tamaño de fuente a los JLabel
+         vidaLabel1.setFont(labelFont);
+         danoLabel1.setFont(labelFont);
+         roboLabel1.setFont(labelFont);
+@@ -97,8 +87,21 @@
+         roboLabel2.setFont(labelFont);
+         tokensLabel2.setFont(labelFont);
+ 
+-        // Establece un color de texto para los JLabel
++        Color labelColor = getLabelColor();
++        Color textColor = getTextColor();
++
++        creature1Panel.setBackground(labelColor);
++        creature2Panel.setBackground(labelColor);
+ 
++        vidaLabel1.setForeground(textColor);
++        danoLabel1.setForeground(textColor);
++        roboLabel1.setForeground(textColor);
++        tokensLabel1.setForeground(textColor);
++
++        vidaLabel2.setForeground(textColor);
++        danoLabel2.setForeground(textColor);
++        roboLabel2.setForeground(textColor);
++        tokensLabel2.setForeground(textColor);
+ 
+         creature1Panel.add(vidaLabel1);
+         creature1Panel.add(danoLabel1);
+@@ -114,6 +117,9 @@
+         frame.repaint();
+     }
+ 
++    public abstract Color getLabelColor();
++
++    public abstract Color getTextColor();
+ 
+     public JFrame getFrame() {
+         return frame;
+@@ -130,5 +136,4 @@
+     public void setLogoPanel(JPanel logoPanel) {
+         this.logoPanel = logoPanel;
+     }
+-
+-}
+\ No newline at end of file
++}
+Index: RPG/src/GUI/SegaWindow.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package GUI;\r\n\r\n\r\nimport java.awt.*;\r\npublic class SegaWindow extends Window {\r\n    public SegaWindow(String title) {\r\n        super(title);\r\n        setColor();\r\n        setLogo(\"IMG/SEGA.png\");\r\n    }\r\n\r\n    @Override\r\n    public void setColor() {\r\n        getFrame().getContentPane().setBackground(Color.decode(\"#003366\"));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RPG/src/GUI/SegaWindow.java b/RPG/src/GUI/SegaWindow.java
+--- a/RPG/src/GUI/SegaWindow.java	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
++++ b/RPG/src/GUI/SegaWindow.java	(date 1698969783234)
+@@ -2,6 +2,8 @@
+ 
+ 
+ import java.awt.*;
++import java.awt.Color;
++
+ public class SegaWindow extends Window {
+     public SegaWindow(String title) {
+         super(title);
+@@ -13,4 +15,15 @@
+     public void setColor() {
+         getFrame().getContentPane().setBackground(Color.decode("#003366"));
+     }
++
++    @Override
++    public Color getLabelColor() {
++        return getFrame().getContentPane().getBackground();
++    }
++
++    @Override
++    public Color getTextColor() {
++        return Color.RED; // Color de SegaButton
++    }
+ }
++
+Index: jueguito.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/jueguito.iml b/jueguito.iml
+new file mode 100644
+--- /dev/null	(date 1698970492815)
++++ b/jueguito.iml	(date 1698970492815)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/RPG/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="SonarLintModuleSettings">
++    <option name="uniqueId" value="5ce8eeaa-14f4-4d24-a741-a8b448e9ca23" />
++  </component>
++</module>
+\ No newline at end of file
+Index: RPG/src/Game/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Game;\r\n\r\n\r\n\r\nimport GUI.*;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\n\r\npublic class Main {\r\n\r\n    public static void main(String[] args) {\r\n\r\n        GUIFactory factory;\r\n        factory = new SegaGUIFactory();\r\n        AbstractFactory factoria;\r\n        factoria = new HumanFactory();\r\n        Applicattion app = new Applicattion(factory,factoria);\r\n        app.createGUI();\r\n\r\n\r\n\r\n    };\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RPG/src/Game/Main.java b/RPG/src/Game/Main.java
+--- a/RPG/src/Game/Main.java	(revision f8312d5690e2934477752bb22ba1991a25fc47aa)
++++ b/RPG/src/Game/Main.java	(date 1698970318301)
+@@ -11,18 +11,82 @@
+ 
+ 
+ public class Main {
+-
+     public static void main(String[] args) {
++        SwingUtilities.invokeLater(() -> {
++            ConfiguracionGUI configuracionGUI = new ConfiguracionGUI();
++            configuracionGUI.setVisible(true);
++        });
++    }
++
++    public static class ConfiguracionGUI extends JFrame {
++        private JComboBox<String> guiComboBox;
++        private JComboBox<String> criatura1ComboBox;
++        private JComboBox<String> criatura2ComboBox;
++        private JButton aplicarButton;
++
++        public ConfiguracionGUI() {
++            setTitle("Configuración");
++            setSize(300, 200);
++            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
++            setLayout(new BorderLayout());
++
++            JPanel comboBoxPanel = new JPanel(new GridLayout(3, 2));
++
++            comboBoxPanel.add(new JLabel("Tipo de GUI:"));
++            guiComboBox = new JComboBox<>(new String[]{"Sega", "Xbox", "Nintendo"});
++            comboBoxPanel.add(guiComboBox);
+ 
+-        GUIFactory factory;
+-        factory = new SegaGUIFactory();
+-        AbstractFactory factoria;
+-        factoria = new HumanFactory();
+-        Applicattion app = new Applicattion(factory,factoria);
+-        app.createGUI();
+-
++            comboBoxPanel.add(new JLabel("Criatura 1:"));
++            criatura1ComboBox = new JComboBox<>(new String[]{"HumanFactory", "MagicFactory"});
++            comboBoxPanel.add(criatura1ComboBox);
++
++            comboBoxPanel.add(new JLabel("Criatura 2:"));
++            criatura2ComboBox = new JComboBox<>(new String[]{"HumanFactory", "MagicFactory"});
++            comboBoxPanel.add(criatura2ComboBox);
++
++            add(comboBoxPanel, BorderLayout.CENTER);
++
++            aplicarButton = new JButton("Aplicar");
++            aplicarButton.addActionListener(new ActionListener() {
++                @Override
++                public void actionPerformed(ActionEvent e) {
++                    aplicarConfiguracion();
++                }
++            });
++            add(aplicarButton, BorderLayout.SOUTH);
++        }
++
++        private void aplicarConfiguracion() {
++            String tipoGUI = (String) guiComboBox.getSelectedItem();
++            String tipoCriatura1 = (String) criatura1ComboBox.getSelectedItem();
++            String tipoCriatura2 = (String) criatura2ComboBox.getSelectedItem();
++
++            GUIFactory guiFactory = crearGUIFactory(tipoGUI);
++            AbstractFactory criatura1Factory = crearCreatureFactory(tipoCriatura1);
++            AbstractFactory criatura2Factory = crearCreatureFactory(tipoCriatura2);
++
++            setVisible(false);
++            dispose();
++
++            Application app = new Application(guiFactory, criatura1Factory, criatura2Factory);
++            app.createGUI();
++        }
+ 
++        private GUIFactory crearGUIFactory(String tipoGUI) {
++            switch (tipoGUI) {
++                case "Sega": return new SegaGUIFactory();
++                case "Xbox": return new XboxGUIFactory();
++                case "Nintendo": return new NintendoGUIFactory();
++                default: return null;
++            }
++        }
+ 
+-    };
+-
+-}
+\ No newline at end of file
++        private AbstractFactory crearCreatureFactory(String tipoCriatura) {
++            switch (tipoCriatura) {
++                case "HumanFactory": return new HumanFactory();
++                case "MagicFactory": return new MagicFactory();
++                default: return null;
++            }
++        }
++    }
++}

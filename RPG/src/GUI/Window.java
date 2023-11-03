@@ -4,6 +4,10 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
+
 public abstract class Window {
     private JPanel contentPanel;
     private JPanel creature1Panel;
@@ -29,8 +33,7 @@ public abstract class Window {
 
         // Configura el color de fondo de los paneles
         frame.add(creature1Panel, BorderLayout.WEST); // Coloca creature1Panel a la izquierda
-        frame.add(creature2Panel, BorderLayout.EAST);
-
+        frame.add(creature2Panel, BorderLayout.EAST); // Coloca creature2Panel a la derecha
     }
 
     public abstract void setColor();
@@ -46,7 +49,6 @@ public abstract class Window {
         frame.setVisible(true);
         frame.revalidate();
         frame.repaint();
-
     }
 
     public void setLogo(String logoPath) {
@@ -58,7 +60,6 @@ public abstract class Window {
 
     public void showCreatureStats(String vida1, String dano1, String robo1, String tokens1,
                                   String vida2, String dano2, String robo2, String tokens2) {
-
         creature1Panel.removeAll(); // Elimina todas las etiquetas anteriores
         creature2Panel.removeAll();
         creature1Panel.setLayout(new GridLayout(0, 1)); // Cambia a GridLayout con una sola columna
@@ -76,17 +77,6 @@ public abstract class Window {
         JLabel roboLabel2 = new JLabel(robo2);
         JLabel tokensLabel2 = new JLabel(tokens2);
 
-        vidaLabel1.setForeground(Color.RED);
-        danoLabel1.setForeground(Color.RED);
-        roboLabel1.setForeground(Color.RED);
-        tokensLabel1.setForeground(Color.RED);
-
-        vidaLabel2.setForeground(Color.RED);
-        danoLabel2.setForeground(Color.RED);
-        roboLabel2.setForeground(Color.RED);
-        tokensLabel2.setForeground(Color.RED);
-
-        // Aplica el tamaño de fuente a los JLabel
         vidaLabel1.setFont(labelFont);
         danoLabel1.setFont(labelFont);
         roboLabel1.setFont(labelFont);
@@ -97,8 +87,21 @@ public abstract class Window {
         roboLabel2.setFont(labelFont);
         tokensLabel2.setFont(labelFont);
 
-        // Establece un color de texto para los JLabel
+        Color labelColor = getLabelColor();
+        Color textColor = getTextColor();
 
+        creature1Panel.setBackground(labelColor);
+        creature2Panel.setBackground(labelColor);
+
+        vidaLabel1.setForeground(textColor);
+        danoLabel1.setForeground(textColor);
+        roboLabel1.setForeground(textColor);
+        tokensLabel1.setForeground(textColor);
+
+        vidaLabel2.setForeground(textColor);
+        danoLabel2.setForeground(textColor);
+        roboLabel2.setForeground(textColor);
+        tokensLabel2.setForeground(textColor);
 
         creature1Panel.add(vidaLabel1);
         creature1Panel.add(danoLabel1);
@@ -114,6 +117,9 @@ public abstract class Window {
         frame.repaint();
     }
 
+    public abstract Color getLabelColor();
+
+    public abstract Color getTextColor();
 
     public JFrame getFrame() {
         return frame;
@@ -130,5 +136,4 @@ public abstract class Window {
     public void setLogoPanel(JPanel logoPanel) {
         this.logoPanel = logoPanel;
     }
-
 }

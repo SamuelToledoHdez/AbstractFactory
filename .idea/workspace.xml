@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2713d622-c73d-4996-9f5f-80fb173bc327" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/jueguito.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/GUI/MainPrueba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/GUI/NintendoWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/RPG/src/GUI/NintendoWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/GUI/SegaWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/RPG/src/GUI/SegaWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/GUI/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/RPG/src/GUI/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/GUI/XboxWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/RPG/src/GUI/XboxWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/Game/Applicattion.java" beforeDir="false" afterPath="$PROJECT_DIR$/RPG/src/Game/Applicattion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/Game/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RPG/src/Game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/RPG/src/Game/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/Button.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/GUIFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/MainPrueba.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/NintendoButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/NintendoGUIFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/NintendoWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/SegaButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/SegaGUIFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/SegaWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/Window.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/XboxButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/XboxGUIFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/GUI/XboxWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/AbstractFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/Applicattion$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/Applicattion$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/Applicattion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/Creatures.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/HumanCreature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/HumanFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/HumanToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/HumanWeapon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/MagicCreature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/MagicFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/MagicToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/MagicWeapon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RPG/Game/Weapon.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2XdnpZhVsB2sIvegYGYQa6Bde6C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "GUI",
+    "last_opened_file_path": "C:/Users/crerr/OneDrive/Desktop/jueguito"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2713d622-c73d-4996-9f5f-80fb173bc327" name="Changes" comment="" />
+      <created>1698968007990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698968007990</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

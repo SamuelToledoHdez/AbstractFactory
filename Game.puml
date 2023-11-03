@@ -1,0 +1,77 @@
+@startuml
+class Game.HumanWeapon {
+}
+class Game.MagicFactory {
++ Weapon weaponBuild()
++ Token tokenBuild()
++ Creatures creatureBuild()
+}
+class Game.Client {
+}
+abstract class Game.Weapon {
+# double dano
+# double robo
++ double getDano()
++ void setDano(double)
++ double getRobo()
++ void setRobo(double)
+}
+class Game.HumanToken {
+}
+class Game.HumanCreature {
+}
+abstract class Game.Creatures {
+# double vida
++ double getVida()
++ void setVida(double)
+}
+class Game.MagicWeapon {
+}
+class Game.MagicToken {
+}
+class Game.MagicCreature {
+}
+abstract class Game.Token {
+# double cantidad
++ double getCantidad()
++ void setCantidad(double)
+}
+class Game.Applicattion {
+- Window window
+- Button button1
+- Button button2
+- GUIFactory factory
+- AbstractFactory factoria
+- Creatures criatura1
+- Creatures criatura2
+- Weapon weapon1
+- Weapon weapon2
+- Token token1
+- Token token2
++ void createGUI()
+- void updateCreatureStats(Creatures,Weapon,Token,Creatures,Weapon,Token)
+}
+class Game.HumanFactory {
++ Weapon weaponBuild()
++ Token tokenBuild()
++ Creatures creatureBuild()
+}
+abstract class Game.AbstractFactory {
++ {abstract}Weapon weaponBuild()
++ {abstract}Token tokenBuild()
++ {abstract}Creatures creatureBuild()
+}
+class Game.Main {
++ {static} void main(String[])
+}
+
+
+Game.Weapon <|-- Game.HumanWeapon
+Game.AbstractFactory <|-- Game.MagicFactory
+Game.Token <|-- Game.HumanToken
+Game.Creatures <|-- Game.HumanCreature
+Game.Weapon <|-- Game.MagicWeapon
+Game.Token <|-- Game.MagicToken
+Game.Creatures <|-- Game.MagicCreature
+Game.AbstractFactory <|-- Game.HumanFactory
+@enduml

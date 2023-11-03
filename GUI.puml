@@ -1,0 +1,77 @@
+@startuml
+abstract class GUI.Window {
+- JPanel contentPanel
+- JPanel creature1Panel
+- JPanel creature2Panel
+- JFrame frame
+- JPanel logoPanel
++ {abstract}void setColor()
++ void addComponent(Component)
++ void display()
++ void setLogo(String)
++ void showCreatureStats(String,String,String,String,String,String,String,String)
++ JFrame getFrame()
++ void setFrame(JFrame)
++ JPanel getLogoPanel()
++ void setLogoPanel(JPanel)
+}
+class GUI.SegaWindow {
++ void setColor()
+}
+class GUI.NintendoGUIFactory {
++ Window createWindow(String)
++ Button createButton(String)
+}
+class GUI.NintendoWindow {
++ void setColor()
+}
+abstract class GUI.GUIFactory {
++ {abstract}Window createWindow(String)
++ {abstract}Button createButton(String)
+}
+abstract class GUI.Button {
++ {abstract}void setColor()
+}
+class GUI.SegaButton {
++ void setColor()
+}
+class GUI.XboxGUIFactory {
++ Window createWindow(String)
++ Button createButton(String)
+}
+class GUI.SegaGUIFactory {
++ Window createWindow(String)
++ Button createButton(String)
+}
+class GUI.XboxWindow {
++ void setColor()
+}
+class GUI.NintendoButton {
++ void setColor()
+}
+class GUI.MainPrueba {
++ {static} void main(String[])
+}
+class GUI.Application {
+- Window window
+- Button button1
+- Button button2
+- GUIFactory factory
++ void createGUI()
+}
+class GUI.XboxButton {
++ void setColor()
+}
+
+
+GUI.Window <|-- GUI.SegaWindow
+GUI.GUIFactory <|-- GUI.NintendoGUIFactory
+GUI.Window <|-- GUI.NintendoWindow
+GUI.JButton <|-- GUI.Button
+GUI.Button <|-- GUI.SegaButton
+GUI.GUIFactory <|-- GUI.XboxGUIFactory
+GUI.GUIFactory <|-- GUI.SegaGUIFactory
+GUI.Window <|-- GUI.XboxWindow
+GUI.Button <|-- GUI.NintendoButton
+GUI.Button <|-- GUI.XboxButton
+@enduml

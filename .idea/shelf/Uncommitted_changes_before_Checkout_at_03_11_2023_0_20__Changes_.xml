@@ -1,0 +1,159 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_03_11_2023_0_20_[Changes]" date="1698970843539" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_03_11_2023_0_20_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 03/11/2023 0:20 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/Token.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/NintendoButton.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/Applicattion.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/MainPrueba.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/NintendoWindow.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/GUIFactory.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/Weapon.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/NintendoGUIFactory.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/MagicWeapon.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/SegaGUIFactory.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/MagicCreature.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/HumanCreature.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/XboxButton.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/HumanFactory.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/HumanToken.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/XboxGUIFactory.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/HumanWeapon.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/Button.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/SegaWindow.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/Creatures.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/AbstractFactory.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/Applicattion$2.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/MagicFactory.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/Applicattion$1.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/MagicToken.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/Main.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/Application.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/Game/Client.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/Window.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/SegaButton.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RPG/GUI/XboxWindow.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
